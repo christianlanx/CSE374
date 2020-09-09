@@ -1,0 +1,19 @@
+Script started on Tue 31 Mar 2020 01:04:36 PM PDT
+]0;chrisl47@klaatu:~[?1034h[chrisl47@klaatu ~]$ whoami
+chrisl47
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ echo $SHELL
+/bin/bash
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ pwd
+/homes/chrisl47
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ uname -a
+Linux klaatu.cs.washington.edu 4.14.145-1.el7.retpoline.x86_64 #1 SMP Thu Sep 19 08:49:41 PDT 2019 x86_64 x86_64 x86_64 GNU/Linux
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ gcc --version -std=c11
+gcc (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ exit
+exit
+
+Script done on Tue 31 Mar 2020 01:05:07 PM PDT

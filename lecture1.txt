@@ -1,0 +1,124 @@
+find your zoom menu, make sure to mute yourself
+today, skip ahead to this bit, talk about all of our tech, the zoom setup,
+our schedule for the quarter, where to get help, basic roles
+
+find all the resources, make sure that you can view the video and attend lecture via zoom. ummmmmmmmmmmmmmmmmmm
+
+command line tools and scripts to automate tasks
+c programming with explicit memory management
+tools for programming
+software engineering practice
+using linux or unix
+
+basics of concurrency
+An introduction about how to learn what you want to know to move forward
+
+so you can figure out on your own how to find the answers as you move forward.
+
+I think that that slides are good
+
+We are really lucky to have six TA's this quarter.
+Andrew Hu, Cynthia Zhang, Sujie Zhou, Dixon Tirtayadi, Keith Jiang, Simon McFarlane.
+
+They will be available to answer questions and such
+
+Who are you. 100 students enrolled in this course. Mostly EE and Applied Math, General Sciences, natural sciences, and some other Engineering majors. By and large not Computer Science majors. How do we help you understand and use the tools you want to use.
+
+Mostly Juniors. You are here to learn.
+
+I wanted to try something with that in mind. I should be able to give you a poll. I'm going to try to give an anonymous poll. I'm gonna give you some different choices.
+
+I don't know if we'll have the opportunity to use polls very often, but they are something we can use to break up the lectures a little bit. 
+
+one second while i figure this out
+
+One of the things I wanted to talk about was the tools you have available to you.
+
+Our primary form of interaction will be Canvas. On the front page is the syllabus. It also tells you all of the stuff we have coming up. Lectures, Zoom Links and the occaisonal homework assignment. You can also use the calendar view to see what's up.
+
+There's also a Zoom button. If you are concerned  
+
+Links are from the webpage, the at is to stop bots or something
+
+theres also a webpage which has all the basic info
+
+Syllabus, a rundown of the assignments, but it mostly redirects to Canvas. Your view looks different than mine. 
+
+This resources tab should be useful, it is a collection of links that are helpful to the course to help you get started. There will be all these different links you can refer to. 
+There is a schedule, I will try to publish my slides, you can access them through the schedule (on the website). 
+
+ed stem is a new app, instructor is unfamiliar with it. We are in lecture number one.
+
+Piazza has some privacy issues.
+
+some notes on adding the course
+
+some privacy info
+
+change your zoom name, don't share your computer audio and video during the lectures
+
+office hours are going to be a little different. During office hours, we will be using a waiting room, like waiting for the TA's office. They can also present, or help one on one.
+
+You will probably want to share your screen during office hours. 
+
+please let us know if there are any suggestions you have for course administration
+
+details about the actual class. 
+
+lecture course with three lectures a wek. 
+
+lectures need to be published, later in the day. They will be on canvas, and edstem. But they will not be on the public webpage. 
+
+in addition to the lecture, there will be a number of homework assignments. There will also be a team assignment where you work with someone else. 
+
+Normally there are two exams. I will use a pathway of a weekly checkin quiz. These will just be a simple check. These will count as part of the grade like the midterm. Take-home style final for 15% of the grade. 
+
+The emphasis is making sure you understand the material. 
+
+====What is your job to do?=====
+
+Canvas contains everything you need to do.
+The discussion group is also a great resource, but Canvas has everything else
+
+The assignments are a bit more open-ended. You can use stuff from outside. 
+
+Get comfy w/ Linnix.
+
+waiting to see timezone distributions. There are some other tools that you may want to use. Informational web pages about linux or C++ or whatever. And then, there are a couple of reccommended books.
+
+You can get books delivered from the bookstore, UW students also have access to O'Reilly. I had a hard time finding a copy. They have copies on reserve, but they may be hard to access. Most of the things you need to know about C are available online. 
+
+The book is hard to read. There are times where it's good to have an authoratative answer. You probably won't read it cover to cover. 
+
+The Linux Pocket Guide is a good read tho.
+
+Academic Integrity
+Write your own code!
+If you get into the habit of being a copypaster, you often will not understand why you are writing the code. 
+It is to your benefit that you create everything for yourself.
+I would like people to share their approach, but do not share substantial code snippets.
+
+If you have any questions about what's allowed, ask a member of the instructional team. 
+
+Due dates are not a suggestion. They are deadlines. 
+
+Times are posted in PDT. We will allow some late submissions, with a penalty. 20% off per day. Life happens. As always, communicate in advance if you are having troubles. 
+
+intro to linux, the command line and scripting tools
+2. Intro to C programming, of particular interest to EE majors
+3. How to debug, evaluate and work with other people
+
+That's it for today. Anybody want to chat. 
+
+Can we work ahead?
+Yes, just wait until things get posted. 
+
+Double check your work on a school machine. SSH into it.
+
+IDE is not recommended. 
+
+how to remote into klaatu.
+
+write a webpage that attracts viewers. Write a program that solves a specific problem.
+
+one hard assignment, the rest weren't too bad.  

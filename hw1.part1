@@ -1,0 +1,113 @@
+Script started on Wed 01 Apr 2020 03:38:19 PM PDT
+]0;chrisl47@klaatu:~[?1034h[chrisl47@klaatu ~]$ echo 'Greetings, CSE374'
+Greetings, CSE374
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ date
+Wed Apr  1 15:38:34 PDT 2020
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ passwd
+Changing password for user chrisl47.
+Changing password for chrisl47.
+(current) UNIX password: 
+New password: 
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ 
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ 
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ pwd
+/homes/chrisl47
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ ls -a
+[0m[01;34m.[0m   .bash_history  .bash_profile  [01;34m.config[0m  hw0.script  hw1part1.asciinema  [01;34m.mozilla[0m    .viminfo
+[01;34m..[0m  .bash_logout   .bashrc        .emacs   hw1.part1   .kshrc              secretfile  .zshrc
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ mkdir temp
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ mv temp HWFiles
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ cd HWFiles
+]0;chrisl47@klaatu:~/HWFiles[chrisl47@klaatu HWFiles]$ date > now
+]0;chrisl47@klaatu:~/HWFiles[chrisl47@klaatu HWFiles]$ less now
+[?1049h[?1h=Wed Apr  1 15:39:24 PDT 2020
+[7mnow (END)[27m[K[K[?1l>[?1049l]0;chrisl47@klaatu:~/HWFiles[chrisl47@klaatu HWFiles]$ cp now before
+]0;chrisl47@klaatu:~/HWFiles[chrisl47@klaatu HWFiles]$ less before
+[?1049h[?1h=Wed Apr  1 15:39:24 PDT 2020
+[7mbefore (END)[27m[K[K[K[7m(END)[27m[K[K[?1l>[?1049l]0;chrisl47@klaatu:~/HWFiles[chrisl47@klaatu HWFiles]$ ls -l
+total 8
+-rw-rw-r-- 1 chrisl47 chrisl47 29 Apr  1 15:39 before
+-rw-rw-r-- 1 chrisl47 chrisl47 29 Apr  1 15:39 now
+]0;chrisl47@klaatu:~/HWFiles[chrisl47@klaatu HWFiles]$ touch tmpdata
+]0;chrisl47@klaatu:~/HWFiles[chrisl47@klaatu HWFiles]$ mv tmpdata test
+]0;chrisl47@klaatu:~/HWFiles[chrisl47@klaatu HWFiles]$ cd ..
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ rm -rf HWFiles
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ 
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ 
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ cat > secretfile
+bash: secretfile: Permission denied
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ rm secretfile 
+rm: remove write-protected regular file ‘secretfile’? y
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ rm secretfile cat > secretfile
+Limited distribution
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ less secretfile 
+[?1049h[?1h=Limited distribution
+[7msecretfile (END)[27m[K[K[?1l>[?1049l]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ chmod a-w secretfile
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ cat > secretfile
+bash: secretfile: Permission denied
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ chmod a-r secretfile
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ ls -l
+total 24
+-rw-rw-r-- 1 chrisl47 chrisl47   855 Mar 31 13:05 hw0.script
+-rw-rw-r-- 1 chrisl47 chrisl47     0 Apr  1 15:38 hw1.part1
+-rw-rw-r-- 1 chrisl47 chrisl47 12291 Apr  1 15:41 hw1part1.asciinema
+---------- 1 chrisl47 chrisl47    21 Apr  1 15:40 secretfile
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ cat secretfile
+cat: secretfile: Permission denied
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ 
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ 
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ uname -r
+4.14.145-1.el7.retpoline.x86_64
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ ps -u chrisl47
+  PID TTY          TIME CMD
+24638 ?        00:00:00 sshd
+24646 pts/0    00:00:00 bash
+24745 pts/0    00:00:00 asciinema
+24749 pts/0    00:00:00 asciinema
+24750 pts/2    00:00:00 bash
+24820 pts/2    00:00:00 script
+24822 pts/2    00:00:00 script
+24823 pts/3    00:00:00 bash
+25276 pts/3    00:00:00 ps
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ top -U chrisl47
+[?1h=[?25l[H[2J(B[mtop - 15:41:53 up 7 days,  2:11,  5 users,  load average: 0.06, 0.04, 0.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 125 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m  74 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  3.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 97.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  4040620 (B[m[39;49mtotal,(B[m[39;49m[1m   379232 (B[m[39;49mfree,(B[m[39;49m[1m    98284 (B[m[39;49mused,(B[m[39;49m[1m  3563104 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  2096124 (B[m[39;49mtotal,(B[m[39;49m[1m  2095600 (B[m[39;49mfree,(B[m[39;49m[1m      524 (B[m[39;49mused.(B[m[39;49m[1m  3440072 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                        (B[m[39;49m[K
+(B[m[1m25285 chrisl47  20   0  162052   4456   3780 R   6.7  0.1   0:00.01 top                                                            (B[m[39;49m[K
+(B[m24638 chrisl47  20   0  157452   4116   2760 S   0.0  0.1   0:00.09 sshd                                                           (B[m[39;49m[K
+(B[m24646 chrisl47  20   0  115460   3360   2944 S   0.0  0.1   0:00.01 bash                                                           (B[m[39;49m[K
+(B[m24745 chrisl47  20   0  309260  24136   8980 S   0.0  0.6   0:00.63 asciinema                                                      (B[m[39;49m[K
+(B[m24749 chrisl47  20   0  233404  18248   3136 S   0.0  0.5   0:00.07 asciinema                                                      (B[m[39;49m[K
+(B[m24750 chrisl47  20   0  115464   3392   3024 S   0.0  0.1   0:00.02 bash                                                           (B[m[39;49m[K
+(B[m24820 chrisl47  20   0  114212   2044   1900 S   0.0  0.1   0:00.00 script                                                         (B[m[39;49m[K
+(B[m24822 chrisl47  20   0  114216   1172   1020 S   0.0  0.0   0:00.00 script                                                         (B[m[39;49m[K
+(B[m24823 chrisl47  20   0  115464   3360   2924 S   0.0  0.1   0:00.05 bash                                                           (B[m[39;49m[K
+[J[H(B[mtop - 15:41:56 up 7 days,  2:11,  5 users,  load average: 0.06, 0.04, 0.00(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  0.2 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 98.7 (B[m[39;49mid,(B[m[39;49m[1m  1.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.2 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m  4040620 (B[m[39;49mtotal,(B[m[39;49m[1m   379116 (B[m[39;49mfree,(B[m[39;49m[1m    98384 (B[m[39;49mused,(B[m[39;49m[1m  3563120 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m  2096124 (B[m[39;49mtotal,(B[m[39;49m[1m  2095600 (B[m[39;49mfree,(B[m[39;49m[1m      524 (B[m[39;49mused.(B[m[39;49m[1m  3439972 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+(B[m24749 chrisl47  20   0  233404  18248   3136 S   0.3  0.5   0:00.08 asciinema                                                      (B[m[39;49m[K
+(B[m[1m25285 chrisl47  20   0  162052   4492   3780 R   0.3  0.1   0:00.02 top                                                            (B[m[39;49m[K
+(B[m24638 chrisl47  20   0  157452   4116   2760 S   0.0  0.1   0:00.09 sshd                                                           (B[m[39;49m[K
+(B[m24646 chrisl47  20   0  115460   3360   2944 S   0.0  0.1   0:00.01 bash                                                           (B[m[39;49m[K
+(B[m24745 chrisl47  20   0  309260  24136   8980 S   0.0  0.6   0:00.63 asciinema                                                      (B[m[39;49m[K
+
+
+
+
+[J[?1l>[48;1H
+[?12l[?25h[K]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ grep chrisl47 /etc/passwd
+[01;31m[Kchrisl47[m[K:x:28811:28814::/homes/[01;31m[Kchrisl47[m[K:/bin/bash
+]0;chrisl47@klaatu:~[chrisl47@klaatu ~]$ exit
+exit
+
+Script done on Wed 01 Apr 2020 03:42:11 PM PDT

@@ -1,0 +1,31 @@
+Christian Lancaster
+Created with Vim
+
+1.  wc prints the number of newlines, words and bytes for each file specified. 
+    If you pass it multiple files it will also print out a total row. 
+    If you dont pass any files to it, it will read from standard input.    
+    wc -l returns just the number of newlines in a given input stream (followed by the name of the file)
+
+2.   502   565 24308 /etc/passwd
+
+3.  'kill' is used to terminate a process
+
+4.  The environment variable $HOME stores the absolute path of the home directory.
+
+5.  $SHELL is a variable that contains the path to the user's preferred shell.
+    $PWD contains the path to the current working directory
+
+6.  To search for a file, use the 'locate' command. It will return the path to any files that match your argument.
+
+7.  The which command shows the full path of a shell command. Locate is used to find files by name.
+
+8.  The difference between 'echo "Hello World!" > hello' and 'echo "Hello World!"' is that the first one will write that
+    output to a file name hello, and the second will print to standard output.
+
+9.  If we were to execute 'echo "deep breaths" > hello', it would overwrite whatever was in that file before with the text
+    'deep breaths'.
+
+10. Finally, if we were to then run 'echo "relax" >> hello', it would append the text 'relax' to the file 'hello'.
+    The file hello would contain the following text:
+    deep breaths
+    relax
