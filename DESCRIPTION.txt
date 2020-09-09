@@ -1,0 +1,121 @@
+PROJECT OBJECTIVE:    
+    develop and benchmark a memory management package
+
+REQUIREMENTS:
+    Use gitlab, dont store executables  (DONE)
+    Create a makefile with at least three targets (DONE)
+    create a readme file which contains the following
+        names of partners and group identifier
+        statement on division of labor
+        description on the organization of heap data structure and its algos
+        summary of additional features or improvements, description of extra credit, describe any experiments and their results
+        summary of testbench results. How did it work, how fast, how efficient in terms of memory
+        Summary of resources you consulted for info about memory management algorithms
+    High quality code, clean layout, good comments and so on.
+    Comments should be complete and succint.
+    Use clint
+
+MEMORY MANAGEMENT
+    getmem and freemem share a single data structure, which is a linked list of memory blocks that satisfy memory allocation requests
+    each block has a uintptr_t that gives its size, and pointer to the next block on the free list
+    all blocks must be a multiple of 16 bytes in size, and their addresses must be a multiple of 16
+    GETMEM: a block is requested, scan the free list for a block of storage that is large enough, delete that block from the free
+        list, return a pointer to the caller.
+    FREEMEM: return the given block to the free list, combine it with adjacent free blocks if possible to create a larger block
+    
+    If getmem finds a block that is very large, it should divide that block and return a portion that is just large enough
+    Dont split if the remaining fragment is too small to be useful
+    Experiment with this threshold to determine what size is large enough to prevent over fragmentation, without wasting too much space
+
+    this threshold value should be a symbolic constant #defined in the code
+
+    if there are no free blocks large enough to satisfy a request, getmem needs to get more memory from the system, add it to the list
+        and split it up. Return a block that is large enough, and leave the remainder. Only get big chunks at a time (4K or 8K).
+        If the request is really big(200K), then just get it all in one shot.
+
+    Malloc is used to get memory from the system. It gets used when setting up the system, and when adding new memory to the system.
+        Actually, it only gets used when getmem is called, so the system starts out with no memory.
+        This should just be the normal behavior of getmem
+
+    FREEMEM: freemem gets a pointer to a block and needs to put it in the free list.
+        greemem needs to figure out how big the block is. To do this, getmem needs to allocate a block that is bigger than the users
+        request, and store the block size in that hidden space. The pointer points to the start of the block, after the hidden space
+        Freemem knows where the size is hidden, and can read in that data to find the size of the block that it needs to add to the list.
+
+    How to keep track of neighboring blocks: getmem and freemem should keep the blocks on the list in sorted order (by address)
+        adresses + size = start of the new block
+
+    Dont worry about freemem freeing up an entire block of memory that you got from the system.
+
+SUGGESTIONS
+    Pointers and addresses are 64 bits (8 bytes).
+    You will need to do arithmetic on the pointers. To do that you need to cast pointers to ints and ints to pointers.
+        use <inttypes.h> to make this easier for yourself
+        this includes uintptr_t, which can be used as an unsigned integer
+    a void * can be cast to uintptr_t to create an integer value
+    a uintptr_t can be cast to a void * pointer.
+    use printf, with the %p format specifier to print a pointer value
+    Use %lu to print the pointers as decimal numbers
+    to print a uintptr_t value, use printf("%" PRIuPTR "\n", ui); you can also use PRIdPTR or PRIxPTR
+
+BENCHMARK PROGRAM
+    convert command line parameters to int values. Use atoi or similar.
+    use getopt if it helps....
+
+    the benchmark program uses random numbers. Given a seed, random will generate the same sequence
+    to run a different sequence, use system time or /urandom
+    if no option is given, a random seed is the default
+
+    use the clock library function to measure the processor time used
+        DIFFERENCE OF THE TIME BETWEEN START AND FINISH IS TOTAL TIME
+        if ur test is really fast, clock wont change
+        look for better timing functions that work with klaatu
+
+    benchmark needs to maintain a list of pointers from getmem that need to be freed
+        it frees one of these at random when it needs to free some storage
+        allocate an array that is "big enough" using malloc
+        when a pointer is freed, replace it with a pointer from the end of the list and decrement the list size
+        the order in which the pointers are picked should not affect the time needed by the program
+
+DEVELOPING AND TESTING
+    start with bench, maybe
+        use those little stub methods to get it going
+    
+    create prototypes of getmem by using malloc and free
+        this way you can work on bench first, then work on getmem and freemem
+        if you run into any problems, use these good versions as a golden standard
+
+    implement getmem first. then get freemem working later
+
+    use small tests at first
+
+    use the print heap during debugging. get it going. use gdb to xplore the list ('x")
+
+    write some little test programs and print the list or use gdb to verify correct behavior
+
+    put lots of targets in your makefile
+
+    get_mem_stats can be used during debugging to see how free list gets affected
+
+    use check_heap() and other asserts in the program
+        check that pointers are not null, and that data structures are not corrupted
+        check_heap at the beginning and end of any call to freemem / getmem
+        even if everything works good, leave it in there for safety
+        use -DNDEBUG in gcc to disable the asserts if needed
+
+    We will not be using valgrind
+
+    Push, Pull and commit frequently!
+
+EXTRA CREDIT
+    (easy) instead of starting the search from the beginning of freemem, start from where the first block left off
+            wrap around to the front of the list
+            HOW DOES THIS AFFECT YOUR BENCHMARK???
+    (harder) modify the free list and allocation routines so that blocks can be added and recombined in constant time
+        use a boundary tag. In addition to the size space at the beginning, add a few bytes to the end with
+        length information and extra pointers or "free/allocated" bits
+            When a block is being freed, look at the adjacent storage in the heap to find the and and beginning of the
+            previous and next blocks. Determine if they are free or allocated and how big they are without
+            having to search the list
+            I STILL DONT GET THIS, BUT I WANT TO DO IT
+    
